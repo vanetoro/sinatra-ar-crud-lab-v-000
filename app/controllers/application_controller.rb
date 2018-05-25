@@ -17,17 +17,15 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/create' do
-    # binding.pry
     @post  = Post.create(params)
     @post.save
-    # binding.pry
-    @posts = Post.all
+
 
     redirect '/posts'
   end
 
   get '/posts' do
-    binding.pry
+      @posts = Post.all
     erb :posts
   end
 end
