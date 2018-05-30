@@ -33,8 +33,8 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/posts/:id' do
-  binding.pry
-end
+    binding.pry
+  end
 
 end
 get '/posts/:id/edit' do
