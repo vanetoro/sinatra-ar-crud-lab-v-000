@@ -32,7 +32,7 @@ class ApplicationController < Sinatra::Base
     erb :show
   end
 
-  post '/posts/:id' do
+  patch '/posts/:id' do
     binding.pry
   end
 
