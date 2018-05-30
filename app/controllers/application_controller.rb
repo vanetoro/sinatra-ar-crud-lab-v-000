@@ -39,11 +39,10 @@ get '/posts/:id/edit' do
   erb :edit
 end
 
-patch '/posts/:id' do
+  patch '/posts/:id' do
     binding.pry
     @post = Post.find(params[:id])
-    # @post.save
-
+       @post.content = params[:content]
     erb :show
 end
 
