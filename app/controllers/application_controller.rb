@@ -40,11 +40,11 @@ get '/posts/:id/edit' do
 end
 
   patch '/posts/:id' do
-      @post = Post.find(params[:id])
-     @post.name = params[:name]
+    @post = Post.find(params[:id])
+    @post.name = params[:name]
     @post.content = params[:content]
     @post.save
-  
+
     redirect "/posts/#{@posts.id}"
 end
 
