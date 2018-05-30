@@ -49,7 +49,7 @@ end
     redirect "/posts/#{@posts.id}"
 end
 
-  delete '/posts/:id/delete'do
+  delete '/posts/:id/delete' do
     binding.pry
   end
 
