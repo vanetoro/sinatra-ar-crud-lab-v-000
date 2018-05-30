@@ -44,7 +44,7 @@ end
     @post.name = params[:name]
     @post.content = params[:content]
     @post.save
-
+    binding.pry
     redirect "/posts/#{@posts.id}"
 end
 
