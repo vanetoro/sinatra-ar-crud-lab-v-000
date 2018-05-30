@@ -32,10 +32,6 @@ class ApplicationController < Sinatra::Base
     erb :show
   end
 
-  patch '/posts/:id' do
-    binding.pry
-  end
-
 
 get '/posts/:id/edit' do
   @post = Post.find(params[:id])
@@ -43,5 +39,11 @@ get '/posts/:id/edit' do
   erb :edit
 end
 
+patch '/posts/:id' do
+    @post = Post.find(params[:id])
+    @post.save
+  binding.pry
+    erb :show
+end
 
 end
