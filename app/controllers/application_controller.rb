@@ -40,9 +40,10 @@ get '/posts/:id/edit' do
 end
 
 patch '/posts/:id' do
+    binding.pry
     @post = Post.find(params[:id])
     # @post.save
-  binding.pry
+  
     erb :show
 end
 
