@@ -40,7 +40,7 @@ get '/posts/:id/edit' do
 end
 
   patch '/posts/:id' do
-    binding.pry
+    # binding.pry
     @post = Post.find(params[:id])
     @post.name = params[:name]
     @post.content = params[:content]
