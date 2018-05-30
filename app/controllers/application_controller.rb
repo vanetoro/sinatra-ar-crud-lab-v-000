@@ -42,7 +42,7 @@ end
   patch '/posts/:id' do
     binding.pry
     @post = Post.find(params[:id])
-       @post.content = params[:content]
+    @post.content = params[:content]
     erb :show
 end
 
