@@ -40,12 +40,12 @@ get '/posts/:id/edit' do
 end
 
   patch '/posts/:id' do
-    # binding.pry
-    @post = Post.find(params[:id])
+      @post = Post.find(params[:id])
      @post.name = params[:name]
     @post.content = params[:content]
     @post.save
-    erb :show
+  
+    redirect "/posts/#{@posts.id}"
 end
 
 end
