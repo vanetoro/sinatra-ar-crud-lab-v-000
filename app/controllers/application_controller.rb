@@ -8,9 +8,6 @@ class ApplicationController < Sinatra::Base
     set :views, 'app/views'
   end
 
-  get '/' do
-    erb :index
-  end
 
   get '/posts/new' do
     erb :new
@@ -26,6 +23,17 @@ class ApplicationController < Sinatra::Base
 
   get '/posts' do
       @posts = Post.all
-    erb :posts
+      erb :index
   end
+
+  get 'posts/:id' do
+    binding.pry
+    erb :show
+  end
+
+  # get '/show' do
+  #   erb :show
+  # end
+
+
 end
