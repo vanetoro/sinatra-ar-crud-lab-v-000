@@ -41,7 +41,7 @@ end
 
 patch '/posts/:id' do
     @post = Post.find(params[:id])
-    @post.save
+    # @post.save
   binding.pry
     erb :show
 end
