@@ -43,7 +43,7 @@ patch '/posts/:id' do
     binding.pry
     @post = Post.find(params[:id])
     # @post.save
-  
+
     erb :show
 end
 
